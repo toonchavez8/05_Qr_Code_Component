@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+
+:root {
+  /* Color variables */
+  --white: hsl(0, 0%, 100%);
+  --lightGray: hsl(212, 45%, 89%);
+  --grayBlue: hsl(220, 15%, 55%);
+  --darkBlue: hsl(218, 44%, 22%);
+
+  /* Font variables */
+  --font-family-base: "Outfit", sans-serif;
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  /* Border radius */
+  --border-radius: 0.8rem;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
+
+/* body Color */
+body {
+  background-color: var(--lightGray);
+}
+
+/* card design*/
+
+.card-locater {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  padding: 0;
+  transform: translate(-50%, -50%);
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  background-color: var(--white);
+  padding: 1rem;
+  width: 300px;
+  border-radius: var(--border-radius);
+  transition: 250ms ease-in-out;
+}
+
+.imgbox {
+  border-radius: var(--border-radius);
+  width: fit-content;
+  overflow: hidden;
+}
+
+.imgbox img {
+  width: 100%;
+  border-radius: var(--border-radius);
+  transition: 300ms ease-in-out;
+}
+
+.textbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  gap: 1rem;
+}
+
+h1 {
+  font-family: var(--font-family-base);
+  font-weight: var(--fw-bold);
+  font-size: 1.4rem;
+  color: var(--darkBlue);
+  text-align: center;
+}
+
+h3 {
+  font-family: var(--font-family-base);
+  font-weight: var(--fw-regular);
+  font-size: 1rem;
+  color: var(--grayBlue);
+  text-align: center;
+}
+
+/* animation on hover */
+.card-container:hover {
+  transform: scale(1.05);
+}
+.card-container:hover .imgbox img {
+  transform: scale(1.05);
+}
+
+/* attribution section */
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-top: 50px;
+  overflow: hidden;
+}
+.footerblk {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--white);
+  font-family: var(--font-family-base);
+  font-size: 0.8rem;
+  padding-top: 0.2rem;
+  text-align: center;
+  transition: 300ms ease-in-out;
+}
+
+/* @Media for detecting hover capability if true adds hover anim */
+@media (hover: hover) {
+  footer:hover .footerblk {
+    transform: translateY(-0%);
+  }
+  .footerblk {
+    transform: translateY(100%);
+    text-align: center;
+    transition: 300ms ease-in-out;
+  }
+}
